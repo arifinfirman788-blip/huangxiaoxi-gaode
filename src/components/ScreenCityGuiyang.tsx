@@ -471,7 +471,58 @@ const ScreenCityGuiyang: React.FC<Props> = ({ onBack, onFeatureClick, activeFeat
         </div>
       </section>
 
-      {/* 6. [娱 Fun] - Entertainment */}
+      {/* 6. [住 Stay] - Hotel Recommendation (NEW SECTION) */}
+      <section className="px-6 mt-16">
+        <div 
+          id="feature-trigger-guiyang_hotels"
+          onClick={() => onFeatureClick?.('guiyang_hotels')}
+          className={`flex items-end justify-between mb-6 transition-all duration-300 ${
+            activeFeatureId === 'guiyang_hotels' ? 'scale-105' : ''
+          }`}
+        >
+           <div>
+             <span className="text-[10px] font-black text-indigo-600 tracking-widest uppercase">Stay / 栖居</span>
+             <h3 className="text-2xl font-black text-slate-800 italic">山水之间 · 枕梦筑城</h3>
+           </div>
+           <button className="text-[10px] font-black text-slate-400">更多住宿 ›</button>
+        </div>
+
+        <div className="grid grid-cols-2 gap-4">
+           {/* Hotel 1 */}
+           <div className="bg-white rounded-[2.5rem] p-4 shadow-sm border border-slate-100 group">
+              <div className="h-32 rounded-[1.5rem] overflow-hidden mb-3 relative">
+                 <img src={getAssetPath('/guizhou-travel/fandian.png')} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="安纳塔拉" />
+                 <div className="absolute top-2 right-2 bg-black/50 backdrop-blur-md px-2 py-1 rounded-lg">
+                    <span className="text-amber-400 text-[10px] font-black">4.9分</span>
+                 </div>
+              </div>
+              <h4 className="text-sm font-black text-slate-900 mb-1">贵阳安纳塔拉度假酒店</h4>
+              <p className="text-[10px] text-slate-400 mb-2 line-clamp-1">双龙航空港经济区中铁国际生态城</p>
+              <div className="flex items-center gap-2">
+                 <span className="bg-indigo-50 text-indigo-600 text-[9px] font-bold px-1.5 py-0.5 rounded">森林康养</span>
+                 <span className="text-rose-500 text-xs font-black">¥1299<span className="text-[9px] text-slate-400 font-normal">起</span></span>
+              </div>
+           </div>
+
+           {/* Hotel 2 */}
+           <div className="bg-white rounded-[2.5rem] p-4 shadow-sm border border-slate-100 group">
+              <div className="h-32 rounded-[1.5rem] overflow-hidden mb-3 relative">
+                 <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&h=300&fit=crop" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="喜来登" />
+                 <div className="absolute top-2 right-2 bg-black/50 backdrop-blur-md px-2 py-1 rounded-lg">
+                    <span className="text-amber-400 text-[10px] font-black">4.8分</span>
+                 </div>
+              </div>
+              <h4 className="text-sm font-black text-slate-900 mb-1">贵阳喜来登贵航酒店</h4>
+              <p className="text-[10px] text-slate-400 mb-2 line-clamp-1">南明区中华南路49号</p>
+              <div className="flex items-center gap-2">
+                 <span className="bg-indigo-50 text-indigo-600 text-[9px] font-bold px-1.5 py-0.5 rounded">市中心</span>
+                 <span className="text-rose-500 text-xs font-black">¥799<span className="text-[9px] text-slate-400 font-normal">起</span></span>
+              </div>
+           </div>
+        </div>
+      </section>
+
+      {/* 7. [娱 Fun] - Entertainment */}
       <section className="px-6 mt-16 mb-20">
         <div 
           id="feature-trigger-guiyang_entertainment"
