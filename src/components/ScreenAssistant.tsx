@@ -1,4 +1,5 @@
 import React from 'react';
+import { getAssetPath } from '@/utils/assets';
 
 interface Props {
   onFeatureClick?: (id: string) => void;
@@ -14,9 +15,9 @@ const ScreenAssistant: React.FC<Props> = ({
   onCityDblClick 
 }) => {
   const categories = [
-    { id: 'cat_food', title: '美食', icon: '🍲', img: '/guizhou-travel/changwangmian.jpeg' },
-    { id: 'cat_scenery', title: '美景', icon: '⛰️', img: '/guizhou-travel/8b28c747fb1bfeccd123c823c726afa5.jpeg' },
-    { id: 'cat_stay', title: '美宿', icon: '🏨', img: '/guizhou-travel/fandian.png' },
+    { id: 'cat_food', title: '美食', icon: '🍲', img: getAssetPath('/guizhou-travel/changwangmian.jpeg') },
+    { id: 'cat_scenery', title: '美景', icon: '⛰️', img: getAssetPath('/guizhou-travel/8b28c747fb1bfeccd123c823c726afa5.jpeg') },
+    { id: 'cat_stay', title: '美宿', icon: '🏨', img: getAssetPath('/guizhou-travel/fandian.png') },
   ];
 
   const handleImgError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
@@ -41,15 +42,15 @@ const row2 = [
 
   const getCityImg = (name: string) => {
     const cityMap: Record<string, string> = {
-      '贵阳': '/guizhou-travel/guiyang.png',
-      '六盘水': '/guizhou-travel/liupanshui.png',
-      '遵义': '/guizhou-travel/zunyi.png',
-      '铜仁': '/guizhou-travel/tongren.png',
-      '黔东南自治州': '/guizhou-travel/qiandongnan.png',
-      '安顺': '/guizhou-travel/anshun.png',
-      '毕节': '/guizhou-travel/fGi0ZO0wi.png',
-      '黔南自治州': '/guizhou-travel/fGi1AwvnX.png',
-      '黔西南自治州': '/guizhou-travel/fGi09XqGM.png'
+      '贵阳': getAssetPath('/guizhou-travel/guiyang.png'),
+      '六盘水': getAssetPath('/guizhou-travel/liupanshui.png'),
+      '遵义': getAssetPath('/guizhou-travel/zunyi.png'),
+      '铜仁': getAssetPath('/guizhou-travel/tongren.png'),
+      '黔东南自治州': getAssetPath('/guizhou-travel/qiandongnan.png'),
+      '安顺': getAssetPath('/guizhou-travel/anshun.png'),
+      '毕节': getAssetPath('/guizhou-travel/fGi0ZO0wi.png'),
+      '黔南自治州': getAssetPath('/guizhou-travel/fGi1AwvnX.png'),
+      '黔西南自治州': getAssetPath('/guizhou-travel/fGi09XqGM.png')
     };
     return cityMap[name] || 'https://img.lenyiin.com/app/hide.php?key=UHhBLzV6Mnc2VmU3a2hGRGsxMzJCdWNjRTMxQlEwMkZIRC8vY29ZPQ==';
   };
@@ -58,13 +59,13 @@ const row2 = [
     { 
       title: '蘑菇屋寻龙记6日', 
       desc: '6天5晚 | 贵阳市出发 | 9.6分',
-      img: '/guizhou-travel/wechat_img_1.png', 
+      img: getAssetPath('/guizhou-travel/wechat_img_1.png'), 
       tag: '亲子研学' 
     },
     { 
       title: '【2026奢享贵州奇遇记】', 
       desc: '6天5晚 | 贵阳市出发',
-      img: '/guizhou-travel/wechat_img_2.png', 
+      img: getAssetPath('/guizhou-travel/wechat_img_2.png'), 
       tag: '探秘宇宙' 
     }
   ];
@@ -242,7 +243,7 @@ const row2 = [
           className={`relative h-44 rounded-[2.5rem] overflow-hidden shadow-2xl border transition-all cursor-pointer ${activeFeatureId === 'nightlife' ? 'border-amber-400 ring-2 ring-amber-400' : 'border-white/5'}`}
           onClick={() => onFeatureClick?.('nightlife')}
         >
-           <img src="/guizhou-travel/b1eadaddc2e4a2ae349504b7d394389f.jpeg" className="w-full h-full object-cover opacity-70 transition-transform duration-[2000ms] hover:scale-110" />
+           <img src={getAssetPath('/guizhou-travel/b1eadaddc2e4a2ae349504b7d394389f.jpeg')} className="w-full h-full object-cover opacity-70 transition-transform duration-[2000ms] hover:scale-110" />
            <div className="absolute inset-0 bg-gradient-to-t from-[#05307a] via-transparent to-transparent z-10"></div>
            <div className="absolute bottom-6 left-6 right-6 z-20">
               <div className="flex items-center gap-2 mb-2">
@@ -289,7 +290,7 @@ const row2 = [
           className={`bg-gradient-to-br from-blue-700/40 to-blue-900/20 rounded-[2.5rem] p-8 border transition-all cursor-pointer relative overflow-hidden shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)] ${activeFeatureId === '3d_scenery' ? 'border-blue-400 ring-2 ring-blue-400' : 'border-white/5'}`}
           onClick={() => onFeatureClick?.('3d_scenery')}
         >
-           <img src="/guizhou-travel/6dae127fd663ec0fb73ac40403205392.jpeg" className="absolute inset-0 w-full h-full object-cover opacity-40" />
+           <img src={getAssetPath('/guizhou-travel/6dae127fd663ec0fb73ac40403205392.jpeg')} className="absolute inset-0 w-full h-full object-cover opacity-40" />
            <div className="absolute inset-0 bg-gradient-to-r from-[#05307a] via-transparent to-transparent z-10"></div>
            <div className="flex gap-6 items-center relative z-20">
               <div className="flex-1">

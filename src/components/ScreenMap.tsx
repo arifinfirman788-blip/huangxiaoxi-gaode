@@ -1,4 +1,5 @@
 import React from 'react';
+import { getAssetPath } from '@/utils/assets';
 
 const ScreenMap: React.FC = () => {
   return (
@@ -6,7 +7,7 @@ const ScreenMap: React.FC = () => {
       {/* Background Fake Map */}
       <div 
         className="absolute inset-0 grayscale opacity-40 bg-cover bg-center"
-        style={{ backgroundImage: 'url(/guizhou-travel/8b28c747fb1bfeccd123c823c726afa5.jpeg)' }}
+        style={{ backgroundImage: `url(${getAssetPath('/guizhou-travel/8b28c747fb1bfeccd123c823c726afa5.jpeg')})` }}
       ></div>
 
       {/* Map Controls */}
