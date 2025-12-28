@@ -1,4 +1,5 @@
 import React from 'react';
+import { getAssetPath } from '@/utils/assets';
 
 interface Props {
   onBack: () => void;
@@ -77,21 +78,21 @@ const ScreenCityGuiyang: React.FC<Props> = ({ onBack, onFeatureClick, activeFeat
       name: '“森”呼吸·康养之旅', 
       desc: '黔灵山公园 - 观山湖公园 - 贵阳森林公园', 
       time: '1-2天', 
-      img: `/guizhou-travel/qianlings.png`,
+      img: getAssetPath('/guizhou-travel/qianlings.png'),
       tag: '康养生态'
     },
     { 
       name: '“筑”精魂·文化之旅', 
       desc: '甲秀楼 - 翠微园 - 阳明祠 - 省博物馆', 
       time: '1-2天', 
-      img: `/guizhou-travel/jiaxiulou.jpeg`,
+      img: getAssetPath('/guizhou-travel/jiaxiulou.jpeg'),
       tag: '人文历史'
     },
     { 
       name: '“寻”古韵·时光之旅', 
       desc: '青岩古镇 - 花溪湿地 - 夜郎谷', 
       time: '2天', 
-      img: `/guizhou-travel/qingyanguzhen.png`,
+      img: getAssetPath('/guizhou-travel/qingyanguzhen.png'),
       tag: '古镇探秘'
     }
   ];
@@ -101,7 +102,7 @@ const ScreenCityGuiyang: React.FC<Props> = ({ onBack, onFeatureClick, activeFeat
       name: '01 / 肠旺面 · 晨起的仪式', 
       desc: '血嫩、面脆、哨香，这一口鲜辣开启了筑城的清晨。', 
       tag: '百年非遗',
-      img: `/guizhou-travel/changwangmian.jpeg`
+      img: getAssetPath('/guizhou-travel/changwangmian.jpeg')
     },
     { 
       name: '02 / 酸汤鱼 · 苗岭的馈赠', 
@@ -119,7 +120,7 @@ const ScreenCityGuiyang: React.FC<Props> = ({ onBack, onFeatureClick, activeFeat
       name: '04 / 青岩豆腐 · 岁月留香', 
       desc: '古法炭火烘烤，外焦里嫩，蘸上特制辣椒水，满口生香。', 
       tag: '古镇记忆',
-      img: `/guizhou-travel/qingyanguzhen.png`
+      img: getAssetPath('/guizhou-travel/qingyanguzhen.png')
     }
   ];
 
@@ -129,7 +130,7 @@ const ScreenCityGuiyang: React.FC<Props> = ({ onBack, onFeatureClick, activeFeat
       {/* 1. Dynamic Hero Section */}
       <div className="relative h-[320px] w-full flex-shrink-0">
         <img 
-          src={`/guizhou-travel/banner.jpg`} 
+          src={getAssetPath('/guizhou-travel/banner.jpg')} 
           alt="爽爽贵阳" 
           className="w-full h-full object-cover"
         />
@@ -229,7 +230,7 @@ const ScreenCityGuiyang: React.FC<Props> = ({ onBack, onFeatureClick, activeFeat
             </div>
             <div className="flex-1 relative rounded-md overflow-hidden">
               <img 
-                src={`/guizhou-travel/banner.jpg`} 
+                src={getAssetPath('/guizhou-travel/banner.jpg')} 
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
                 alt="城市印象"
               />
@@ -256,7 +257,7 @@ const ScreenCityGuiyang: React.FC<Props> = ({ onBack, onFeatureClick, activeFeat
               </div>
               <div className="flex-1 relative rounded-sm overflow-hidden min-h-0">
                 <img 
-                  src={`/guizhou-travel/jiaxiulou.jpeg`} 
+                  src={getAssetPath('/guizhou-travel/jiaxiulou.jpeg')} 
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   alt="热门景点"
                 />
@@ -280,7 +281,7 @@ const ScreenCityGuiyang: React.FC<Props> = ({ onBack, onFeatureClick, activeFeat
               </div>
               <div className="flex-1 relative rounded-sm overflow-hidden min-h-0">
                 <img 
-                  src={`/guizhou-travel/qingyunshiji.jpg`} 
+                  src={getAssetPath('/guizhou-travel/qingyunshiji.jpg')} 
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   alt="文旅活动"
                 />
@@ -437,7 +438,7 @@ const ScreenCityGuiyang: React.FC<Props> = ({ onBack, onFeatureClick, activeFeat
 
         <div className="grid grid-cols-2 gap-4">
           <div className="h-64 rounded-[2.5rem] bg-slate-100 overflow-hidden relative group">
-             <img src={`/guizhou-travel/qianlings.png`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="黔灵山" />
+             <img src={getAssetPath('/guizhou-travel/qianlings.png')} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="黔灵山" />
              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-6">
                <h4 className="text-white font-black text-lg">黔灵山</h4>
                <span className="text-white/80 text-[10px] font-medium mt-1">黔南第一山</span>
@@ -445,13 +446,13 @@ const ScreenCityGuiyang: React.FC<Props> = ({ onBack, onFeatureClick, activeFeat
           </div>
           <div className="space-y-4">
             <div className="h-32 rounded-[2rem] bg-slate-100 overflow-hidden relative group">
-              <img src={`/guizhou-travel/qingyanguzhen.png`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="青岩古镇" />
+              <img src={getAssetPath('/guizhou-travel/qingyanguzhen.png')} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="青岩古镇" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-4">
                <h4 className="text-white font-black text-sm">青岩古镇</h4>
              </div>
             </div>
             <div className="h-28 rounded-[2rem] bg-slate-100 overflow-hidden relative group">
-              <img src={`/guizhou-travel/jiaxiulou.jpeg`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="甲秀楼" />
+              <img src={getAssetPath('/guizhou-travel/jiaxiulou.jpeg')} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="甲秀楼" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-4">
                <h4 className="text-white font-black text-sm">甲秀楼</h4>
              </div>
@@ -477,7 +478,7 @@ const ScreenCityGuiyang: React.FC<Props> = ({ onBack, onFeatureClick, activeFeat
         
         <div className="rounded-[2.5rem] p-6 relative overflow-hidden h-48 group">
           <img 
-            src={`/guizhou-travel/qingyunshiji.jpg`} 
+            src={getAssetPath('/guizhou-travel/qingyunshiji.jpg')} 
             className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
             alt="青云市集"
           />
