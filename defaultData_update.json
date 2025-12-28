@@ -1,0 +1,80 @@
+{
+  "DEFAULT_DETAILS": [
+    {
+      "id": "banner",
+      "title": "品牌 Banner",
+      "description": "由黄小西运营提供跳转页内容，主要展示贵州旅游的吃住行游购娱的宣传内容",
+      "provider": "黄小西"
+    },
+    {
+      "id": "ai_assistant",
+      "title": "AI 伴游 (黄小西)",
+      "description": "由黄小西团队提供多彩黄小西-AI伴游功能的H5页面跳转链接",
+      "provider": "黄小西"
+    },
+    {
+      "id": "itinerary",
+      "title": "行程规划",
+      "description": "一期由高德团队直接通过小高老师的页面及能力进行交付，根据效果决定是否进行提示词调优",
+      "provider": "高德地图"
+    },
+    {
+      "id": "order",
+      "title": "快捷订购",
+      "description": "由黄小西团队提供多彩黄小西-快捷订购功能的H5页面跳转链接",
+      "provider": "黄小西"
+    },
+    {
+      "id": "city_reach",
+      "title": "全省一键达",
+      "description": "由高德团队进行9个地市的入口设计，一期只有贵阳市可跳转，需考虑其他入口置灰或无法点击",
+      "provider": "高德地图"
+    },
+    {
+      "id": "cat_tips",
+      "title": "游黔贴士",
+      "description": "由黄小西团队提供二级页面及内容",
+      "provider": "黄小西"
+    },
+    {
+      "id": "cat_news",
+      "title": "旅游资讯",
+      "description": "由黄小西团队提供二级页面及内容",
+      "provider": "黄小西"
+    },
+    {
+      "id": "lifestyle_channels",
+      "title": "生活频道聚合",
+      "description": "由高德团队通过现有筛选功能进行复用",
+      "provider": "高德地图"
+    },
+    {
+      "id": "nightlife",
+      "title": "高德扫街榜",
+      "description": "由高德团队通过现有扫街榜功能进行复用",
+      "provider": "高德地图"
+    },
+    {
+      "id": "itinerary_strategy",
+      "title": "城市行程攻略",
+      "description": "由黄小西团队提供线路数据及线路H5详情页链接，高德团队进行地图描点及测试链接是否可用",
+      "provider": "高德地图"
+    },
+    {
+      "id": "3d_scenery",
+      "title": "3D 奇境渲染",
+      "description": "根据高德团队是否有现有的贵州景区再考虑是否使用",
+      "provider": "高德地图"
+    }
+  ],
+  "DEFAULT_GOALS": [
+    "构建“省-市-景”三级联动体系",
+    "流量精准高效转化",
+    "统一全省数字化导览交互标准"
+  ],
+  "DEFAULT_QUESTIONS": [
+    "离线缓存策略",
+    "语音冲突处理逻辑",
+    "动态权重算法应用"
+  ]
+}
