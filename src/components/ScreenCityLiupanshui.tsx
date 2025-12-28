@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { getAssetPath } from '@/utils/assets';
 
 interface Props {
   onBack: () => void;
@@ -12,25 +13,25 @@ const ScreenCityLiupanshui: React.FC<Props> = ({ onBack }) => {
       name: '01 / 水城羊肉粉', 
       desc: '滚烫羊汤浇注米粉，黑山羊肉片薄如纸，一碗入魂。', 
       tag: '国家地理标志',
-      img: '/guizhou-travel/yangroufen.jpg'
+      img: getAssetPath('/guizhou-travel/yangroufen.jpg')
     },
     { 
       name: '02 / 水城烙锅', 
       desc: '中间凸起的特制砂锅，荤素皆可烙，蘸上五香辣椒面。', 
       tag: '西部一绝',
-      img: '/guizhou-travel/laoguo.jpg'
+      img: getAssetPath('/guizhou-travel/laoguo.jpg')
     },
     { 
       name: '03 / 盘县火腿', 
       desc: '肉色红润，香味浓郁，形似琵琶，皮色腊黄。', 
       tag: '非遗美食',
-      img: '/guizhou-travel/ham.jpg'
+      img: getAssetPath('/guizhou-travel/ham.jpg')
     },
     { 
       name: '04 / 荷叶糯米鸡', 
       desc: '荷叶包裹糯米与鸡肉，清香扑鼻，软糯可口。', 
       tag: '街头风味',
-      img: '/guizhou-travel/nuomiji.jpg'
+      img: getAssetPath('/guizhou-travel/nuomiji.jpg')
     }
   ];
 
@@ -53,7 +54,7 @@ const ScreenCityLiupanshui: React.FC<Props> = ({ onBack }) => {
       {/* 1. Hero Promotion Section - Cool City Theme */}
         <div className="relative h-[480px] w-full flex-shrink-0 group overflow-hidden">
           <img 
-            src="/guizhou-travel/liupanshui_hero.jpg" 
+            src={getAssetPath('/guizhou-travel/liupanshui_hero.jpg')}
             onError={(e) => (e.currentTarget.src = 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&fit=crop')}
             alt="中国凉都" 
             className="w-full h-full object-cover transition-transform duration-[3000ms] group-hover:scale-105"
@@ -180,7 +181,7 @@ const ScreenCityLiupanshui: React.FC<Props> = ({ onBack }) => {
         
         <div className="space-y-4">
           <div className="relative h-60 rounded-[2.5rem] overflow-hidden shadow-xl group cursor-pointer">
-            <img src="/guizhou-travel/ski_resort.jpg" onError={handleScenicImgError} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
+            <img src={getAssetPath('/guizhou-travel/ski_resort.jpg')} onError={handleScenicImgError} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
             
             <div className="absolute top-4 right-4 bg-white/20 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-2 border border-white/20">
@@ -196,7 +197,7 @@ const ScreenCityLiupanshui: React.FC<Props> = ({ onBack }) => {
 
           <div className="grid grid-cols-2 gap-4">
             <div className="relative h-48 rounded-[2rem] overflow-hidden shadow-lg group">
-               <img src="/guizhou-travel/wumeng_grassland.jpg" onError={handleScenicImgError} className="w-full h-full object-cover" />
+               <img src={getAssetPath('/guizhou-travel/wumeng_grassland.jpg')} onError={handleScenicImgError} className="w-full h-full object-cover" />
                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
                <div className="absolute bottom-4 left-4 right-4">
                   <div className="text-white text-[13px] font-black leading-tight">乌蒙大草原</div>
@@ -204,7 +205,7 @@ const ScreenCityLiupanshui: React.FC<Props> = ({ onBack }) => {
                </div>
             </div>
             <div className="relative h-48 rounded-[2rem] overflow-hidden shadow-lg group">
-               <img src="/guizhou-travel/tuole_ginkgo.jpg" onError={handleScenicImgError} className="w-full h-full object-cover" />
+               <img src={getAssetPath('/guizhou-travel/tuole_ginkgo.jpg')} onError={handleScenicImgError} className="w-full h-full object-cover" />
                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
                <div className="absolute bottom-4 left-4 right-4">
                   <div className="text-white text-[13px] font-black leading-tight">妥乐古银杏</div>

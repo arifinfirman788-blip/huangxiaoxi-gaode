@@ -365,7 +365,7 @@ const ScreenCityGuiyang: React.FC<Props> = ({ onBack, onFeatureClick, activeFeat
               </div>
             </div>
             <div className="h-40 rounded-[2rem] overflow-hidden">
-              <img src={`/guizhou-travel/yangmingxinxue.png`} className="w-full h-full object-cover grayscale opacity-80" alt="文化传承" />
+              <img src={getAssetPath('/guizhou-travel/yangmingxinxue.png')} className="w-full h-full object-cover grayscale opacity-80" alt="文化传承" />
             </div>
           </div>
 

@@ -155,8 +155,8 @@ const row2 = [
                     className="w-12 h-12 bg-no-repeat bg-contain"
                     style={{ 
                       backgroundImage: `url(${getCityImg(city.name)})`,
-                      backgroundSize: (getCityImg(city.name).includes('thumb.php') || getCityImg(city.name).startsWith('/guizhou-travel/')) ? 'contain' : '300% 300%',
-                      backgroundPosition: (getCityImg(city.name).includes('thumb.php') || getCityImg(city.name).startsWith('/guizhou-travel/')) ? 'center' : `${city.x * 50}% ${city.y * 50}%`,
+                      backgroundSize: (getCityImg(city.name).includes('thumb.php') || getCityImg(city.name).includes('/guizhou-travel/')) ? 'contain' : '300% 300%',
+                      backgroundPosition: (getCityImg(city.name).includes('thumb.php') || getCityImg(city.name).includes('/guizhou-travel/')) ? 'center' : `${city.x * 50}% ${city.y * 50}%`,
                       mixBlendMode: 'multiply'
                     }}
                   />
@@ -176,8 +176,8 @@ const row2 = [
                     className="w-11 h-11 bg-no-repeat bg-contain"
                     style={{ 
                       backgroundImage: `url(${getCityImg(city.name)})`,
-                      backgroundSize: (getCityImg(city.name).includes('thumb.php') || getCityImg(city.name).startsWith('/guizhou-travel/')) ? 'contain' : '300% 300%',
-                      backgroundPosition: (getCityImg(city.name).includes('thumb.php') || getCityImg(city.name).startsWith('/guizhou-travel/')) ? 'center' : `${city.x * 50}% ${city.y * 50}%`,
+                      backgroundSize: (getCityImg(city.name).includes('thumb.php') || getCityImg(city.name).includes('/guizhou-travel/')) ? 'contain' : '300% 300%',
+                      backgroundPosition: (getCityImg(city.name).includes('thumb.php') || getCityImg(city.name).includes('/guizhou-travel/')) ? 'center' : `${city.x * 50}% ${city.y * 50}%`,
                       mixBlendMode: 'multiply'
                     }}
                   />
