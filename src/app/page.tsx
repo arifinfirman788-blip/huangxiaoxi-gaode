@@ -11,9 +11,9 @@ import ScreenCulture from '@/components/ScreenCulture';
 import ScreenCityGuiyang from '@/components/ScreenCityGuiyang';
 import ScreenCityLiupanshui from '@/components/ScreenCityLiupanshui';
 
-const STORAGE_KEY_DETAILS = 'gz_amap_v12_annotations';
-const STORAGE_KEY_QS = 'guizhou_amap_v4_questions';
-const STORAGE_KEY_GOALS = 'guizhou_amap_v4_goals';
+const STORAGE_KEY_DETAILS = 'gz_amap_v13_annotations';
+const STORAGE_KEY_QS = 'guizhou_amap_v5_questions';
+const STORAGE_KEY_GOALS = 'guizhou_amap_v5_goals';
 
 const PROVIDER_CONFIG: Record<ProviderType, { bg: string, text: string, border: string, dot: string }> = {
   '高德地图': { bg: 'bg-blue-600/20', text: 'text-blue-400', border: 'border-blue-500/30', dot: 'bg-blue-500' },
