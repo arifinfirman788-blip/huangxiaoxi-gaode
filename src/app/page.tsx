@@ -54,7 +54,7 @@ const AutoHeightTextarea: React.FC<{
 export default function Home() {
   const [activeScreen, setActiveScreen] = useState<ScreenType>(ScreenType.ASSISTANT);
   const [selectedFeatureId, setSelectedFeatureId] = useState<string | null>(null);
-  const [rightMode, setRightMode] = useState<'GOALS' | 'ANNOTATION'>('GOALS');
+  const [rightMode, setRightMode] = useState<'GOALS' | 'ANNOTATION'>('ANNOTATION');
   const [isViewAll, setIsViewAll] = useState(false);
   const [linePath, setLinePath] = useState<string>('');
   
@@ -257,7 +257,7 @@ export default function Home() {
           {[ScreenType.SEARCH, ScreenType.MAP, ScreenType.ASSISTANT, ScreenType.CITY_GUIYANG].map((type) => (
             <button
               key={type}
-              onClick={() => { setActiveScreen(type); setSelectedFeatureId(null); setRightMode('GOALS'); setIsViewAll(false); }}
+              onClick={() => { setActiveScreen(type); setSelectedFeatureId(null); setRightMode('ANNOTATION'); setIsViewAll(false); }}
               className={`px-8 py-3 rounded-xl text-[10px] font-black transition-all duration-500 whitespace-nowrap uppercase tracking-widest ${
                 activeScreen === type ? 'bg-blue-600 text-white shadow-xl shadow-blue-500/20' : 'text-slate-400 hover:text-white hover:bg-white/5'
               }`}
