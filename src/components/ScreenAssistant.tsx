@@ -119,21 +119,32 @@ const row2 = [
                <img src="https://img.lenyiin.com/app/hide.php?key=YmlZb2x1cjNrRWRrRXlLK3RFT21vN1FvY0ZZOFVZK1VGcWl0bGw0PQ==" className="w-full h-full object-contain" />
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-2 relative z-10">
-            <button 
-              className={`col-span-2 bg-blue-600 text-white text-[11px] font-black py-4 rounded-2xl shadow-xl active:scale-95 transition-all`}
-              onClick={(e) => { e.stopPropagation(); onFeatureClick?.('ai_assistant'); }}
-            >🎙️ AI伴游</button>
-            <button 
-              id="feature-trigger-itinerary"
-              className={`bg-white/10 text-white text-[10px] font-black py-3 rounded-2xl border border-white/10 transition-all ${activeFeatureId === 'itinerary' ? 'bg-blue-600 border-blue-400' : ''}`}
-              onClick={(e) => { e.stopPropagation(); onFeatureClick?.('itinerary'); }}
-            >📅 智能规划</button>
-            <button 
-              id="feature-trigger-order"
-              className={`bg-white/10 text-white text-[10px] font-black py-3 rounded-2xl border border-white/10 transition-all ${activeFeatureId === 'order' ? 'bg-blue-600 border-blue-400' : ''}`}
-              onClick={(e) => { e.stopPropagation(); onFeatureClick?.('order'); }}
-            >🛒 快捷订购</button>
+          <div className="grid grid-cols-2 gap-3 relative z-10 mt-2">
+            {/* Tile 1: AI探索 */}
+            <div 
+              id="feature-trigger-ai_explore"
+              className={`bg-white/10 rounded-2xl p-4 flex flex-col justify-between h-28 border border-white/10 active:scale-95 transition-all cursor-pointer ${activeFeatureId === 'ai_explore' ? 'bg-blue-600 border-blue-400 ring-2 ring-blue-400/50' : 'hover:bg-white/15'}`}
+              onClick={(e) => { e.stopPropagation(); onFeatureClick?.('ai_explore'); }}
+            >
+               <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center text-xl mb-1">🔭</div>
+               <div>
+                 <div className="text-white text-[14px] font-black italic">AI 探索</div>
+                 <div className="text-white/60 text-[9px] font-bold mt-1">发现未知惊喜 · 沉浸式漫游</div>
+               </div>
+            </div>
+
+            {/* Tile 2: AI助手 */}
+            <div 
+              id="feature-trigger-ai_helper"
+              className={`bg-white/10 rounded-2xl p-4 flex flex-col justify-between h-28 border border-white/10 active:scale-95 transition-all cursor-pointer ${activeFeatureId === 'ai_helper' ? 'bg-blue-600 border-blue-400 ring-2 ring-blue-400/50' : 'hover:bg-white/15'}`}
+              onClick={(e) => { e.stopPropagation(); onFeatureClick?.('ai_helper'); }}
+            >
+               <div className="w-10 h-10 rounded-full bg-indigo-500/20 flex items-center justify-center text-xl mb-1">🤖</div>
+               <div>
+                 <div className="text-white text-[14px] font-black italic">AI 助手</div>
+                 <div className="text-white/60 text-[9px] font-bold mt-1">您的贴身管家 · 智能问答</div>
+               </div>
+            </div>
           </div>
         </section>
 

@@ -11,7 +11,7 @@ import ScreenCulture from '@/components/ScreenCulture';
 import ScreenCityGuiyang from '@/components/ScreenCityGuiyang';
 import ScreenCityLiupanshui from '@/components/ScreenCityLiupanshui';
 
-const STORAGE_KEY_DETAILS = 'gz_amap_v13_annotations';
+const STORAGE_KEY_DETAILS = 'gz_amap_v14_annotations';
 const STORAGE_KEY_QS = 'guizhou_amap_v5_questions';
 const STORAGE_KEY_GOALS = 'guizhou_amap_v5_goals';
 

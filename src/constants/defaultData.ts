@@ -11,9 +11,8 @@ export interface FeatureDetail {
 
 export const DEFAULT_DETAILS: FeatureDetail[] = [
   { id: 'banner', title: '品牌 Banner', description: '由黄小西运营提供跳转页内容，主要展示贵州旅游的吃住行游购娱的宣传内容', provider: '黄小西', screen: 'ASSISTANT' },
-  { id: 'ai_assistant', title: 'AI 伴游 (黄小西)', description: '由黄小西团队提供多彩黄小西-AI伴游功能的H5页面跳转链接', provider: '黄小西', screen: 'ASSISTANT' },
-  { id: 'itinerary', title: '行程规划', description: '一期由高德团队直接通过小高老师的页面及能力进行交付，根据效果决定是否进行提示词调优', provider: '高德地图', screen: 'ASSISTANT' },
-  { id: 'order', title: '快捷订购', description: '由黄小西团队提供多彩黄小西-快捷订购功能的H5页面跳转链接', provider: '黄小西', screen: 'ASSISTANT' },
+  { id: 'ai_explore', title: 'AI 探索', description: '发现未知惊喜 · 沉浸式漫游。通过AI技术提供沉浸式的旅游探索体验，让游客发现贵州不一样的美。', provider: '黄小西', screen: 'ASSISTANT' },
+  { id: 'ai_helper', title: 'AI 助手', description: '您的贴身管家 · 智能问答。提供全天候的智能咨询服务，解决游客在旅途中的各种疑问。', provider: '黄小西', screen: 'ASSISTANT' },
   { id: 'city_reach', title: '全省一键达', description: '由高德团队进行9个地市的入口设计，一期只有贵阳市可跳转，需考虑其他入口置灰或无法点击', provider: '高德地图', screen: 'ASSISTANT' },
   { id: 'cat_tips', title: '游黔贴士', description: '由黄小西团队提供二级页面及内容', provider: '黄小西', screen: 'ASSISTANT' },
   { id: 'cat_news', title: '旅游资讯', description: '由黄小西团队提供二级页面及内容', provider: '黄小西', screen: 'ASSISTANT' },
