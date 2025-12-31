@@ -10,28 +10,160 @@ export interface FeatureDetail {
 }
 
 export const DEFAULT_DETAILS: FeatureDetail[] = [
-  { id: 'banner', title: '品牌 Banner', description: '由黄小西运营提供跳转页内容，主要展示贵州旅游的吃住行游购娱的宣传内容', provider: '黄小西', screen: 'ASSISTANT' },
-  { id: 'ai_explore', title: 'AI 探索', description: '发现未知惊喜 · 沉浸式漫游。通过AI技术提供沉浸式的旅游探索体验，让游客发现贵州不一样的美。', provider: '黄小西', screen: 'ASSISTANT' },
-  { id: 'ai_helper', title: 'AI 助手', description: '您的贴身管家 · 智能问答。提供全天候的智能咨询服务，解决游客在旅途中的各种疑问。', provider: '黄小西', screen: 'ASSISTANT' },
-  { id: 'city_reach', title: '全省一键达', description: '由高德团队进行9个地市的入口设计，一期只有贵阳市可跳转，需考虑其他入口置灰或无法点击', provider: '高德地图', screen: 'ASSISTANT' },
-  { id: 'cat_tips', title: '游黔贴士', description: '由黄小西团队提供二级页面及内容', provider: '黄小西', screen: 'ASSISTANT' },
-  { id: 'cat_news', title: '旅游资讯', description: '由黄小西团队提供二级页面及内容', provider: '黄小西', screen: 'ASSISTANT' },
-  { id: 'lifestyle_channels', title: '生活频道聚合', description: '由高德团队通过现有筛选功能进行复用', provider: '高德地图', screen: 'ASSISTANT' },
-  { id: 'nightlife', title: '高德扫街榜', description: '由高德团队通过现有扫街榜功能进行复用', provider: '高德地图', screen: 'ASSISTANT' },
-  { id: 'itinerary_strategy', title: '城市行程攻略', description: '由黄小西团队提供线路数据及线路H5详情页链接，高德团队进行地图描点及测试链接是否可用', provider: '高德地图', screen: 'ASSISTANT' },
-  { id: '3d_scenery', title: '3D 奇境渲染', description: '根据高德团队是否有现有的贵州景区再考虑是否使用', provider: '高德地图', screen: 'ASSISTANT' },
-  { id: 'guiyang_search', title: '搜索', description: '全局搜索接入。整合景区、酒店、美食等全类目资源，提供一站式搜索响应与直达服务。', provider: '高德地图', screen: 'CITY_GUIYANG' },
-  { id: 'guiyang_gold_area', title: '金刚区', description: '核心业务入口。涵盖门票、酒店、线路、餐饮、购物五大高频场景，实现业务快速分流。', provider: '黄小西', screen: 'CITY_GUIYANG' },
-  { id: 'guiyang_news', title: '资讯', description: '城市动态资讯。实时更新贵阳文旅政策、景区动态及特色活动，保持内容时效性。', provider: '贵州文旅', screen: 'CITY_GUIYANG' },
-  { id: 'guiyang_impression', title: '城市印象', description: '筑城人文底蕴聚合。通过视觉化叙事展现贵阳“爽爽”的城市基调与历史深度。', provider: '贵州文旅', screen: 'CITY_GUIYANG' },
-  { id: 'guiyang_attractions', title: '热门景点', description: '核心景区流量枢纽。整合甲秀楼、黔灵山等标志性景点，提供实时热度与快捷购票。', provider: '高德地图', screen: 'CITY_GUIYANG' },
-  { id: 'guiyang_activities', title: '活动日历', description: '城市级文旅动态引擎。聚合青云市集、避暑季等季节性活动，实现“以事引人”。', provider: '贵州文旅', screen: 'CITY_GUIYANG' },
-  { id: 'guiyang_routes', title: '经典线路', description: '精品旅游线路推荐。针对康养、人文、古镇等不同需求提供专业行程规划，支持地图一键描点。', provider: '高德地图', screen: 'CITY_GUIYANG' },
-  { id: 'guiyang_culture', title: '文化底蕴', description: '筑城文化深度解读。挖掘阳明心学、非遗技艺等核心文化要素，提升城市旅游内涵。', provider: '贵州文旅', screen: 'CITY_GUIYANG' },
-  { id: 'guiyang_food_map', title: '美食地图', description: '地道风味导航。聚合肠旺面、酸汤鱼等特色美食，结合地理位置提供精准的寻味指南。', provider: '高德地图', screen: 'CITY_GUIYANG' },
-  { id: 'guiyang_spots', title: '必游景点', description: '必看打卡清单。精选甲秀楼等代表性山水人文景观，作为城市旅游的视觉与内容锚点。', provider: '高德地图', screen: 'CITY_GUIYANG' },
-  { id: 'guiyang_hotels', title: '酒店推荐', description: '高品质住宿精选。整合森林康养、古镇避世等特色民宿与精品酒店，提供直连预订入口。', provider: '黄小西', screen: 'CITY_GUIYANG' },
-  { id: 'guiyang_entertainment', title: '娱乐推荐', description: '夜生活与潮流消费。聚焦青云市集等潮流街区，展现贵阳“赛博朋克”式的现代活力。', provider: '贵州文旅', screen: 'CITY_GUIYANG' }
+  {
+    id: "banner",
+    title: "品牌 Banner",
+    description: "由黄小西运营提供跳转页内容，高德团队进行开发",
+    provider: "高德地图",
+    screen: "ASSISTANT"
+  },
+  {
+    id: "ai_explore",
+    title: "AI 探索",
+    description: "由高德团队提供现有能力",
+    provider: "高德地图",
+    screen: "ASSISTANT"
+  },
+  {
+    id: "ai_helper",
+    title: "AI 助手",
+    description: "由高德团队提供现有能力，黄小西提供IP形象",
+    provider: "高德地图",
+    screen: "ASSISTANT"
+  },
+  {
+    id: "city_reach",
+    title: "全省一键达",
+    description: "由高德团队进行9个地市的入口设计，一期只有贵阳市可跳转，需考虑其他入口置灰或无法点击",
+    provider: "高德地图",
+    screen: "ASSISTANT"
+  },
+  {
+    id: "cat_tips",
+    title: "游黔贴士",
+    description: "由黄小西团队提供运营内容，高德团队负责二级页面开发",
+    provider: "高德地图",
+    screen: "ASSISTANT"
+  },
+  {
+    id: "cat_news",
+    title: "旅游资讯",
+    description: "由黄小西团队提供运营内容或官方接口，高德团队负责二级页面开发",
+    provider: "高德地图",
+    screen: "ASSISTANT"
+  },
+  {
+    id: "lifestyle_channels",
+    title: "生活频道聚合",
+    description: "由高德团队通过现有筛选功能进行复用",
+    provider: "高德地图",
+    screen: "ASSISTANT"
+  },
+  {
+    id: "nightlife",
+    title: "高德扫街榜",
+    description: "由高德团队通过现有扫街榜功能进行复用",
+    provider: "高德地图",
+    screen: "ASSISTANT"
+  },
+  {
+    id: "itinerary_strategy",
+    title: "城市行程攻略",
+    description: "由黄小西团队提供线路数据及线路H5详情页链接，高德团队进行地图描点及测试链接是否可用",
+    provider: "高德地图",
+    screen: "ASSISTANT"
+  },
+  {
+    id: "3d_scenery",
+    title: "3D 奇境渲染",
+    description: "根据高德团队是否有现有的贵州景区再考虑是否使用",
+    provider: "高德地图",
+    screen: "ASSISTANT"
+  },
+  {
+    id: "guiyang_search",
+    title: "搜索",
+    description: "全局搜索接入。整合景区、酒店、美食等全类目资源，提供一站式搜索响应与直达服务。",
+    provider: "高德地图",
+    screen: "CITY_GUIYANG"
+  },
+  {
+    id: "guiyang_gold_area",
+    title: "金刚区",
+    description: "核心业务入口。涵盖门票、酒店、线路、餐饮、购物五大高频场景，实现业务快速分流。",
+    provider: "黄小西",
+    screen: "CITY_GUIYANG"
+  },
+  {
+    id: "guiyang_news",
+    title: "资讯",
+    description: "城市动态资讯。实时更新贵阳文旅政策、景区动态及特色活动，保持内容时效性。",
+    provider: "贵州文旅",
+    screen: "CITY_GUIYANG"
+  },
+  {
+    id: "guiyang_impression",
+    title: "城市印象",
+    description: "筑城人文底蕴聚合。通过视觉化叙事展现贵阳“爽爽”的城市基调与历史深度。",
+    provider: "贵州文旅",
+    screen: "CITY_GUIYANG"
+  },
+  {
+    id: "guiyang_attractions",
+    title: "热门景点",
+    description: "核心景区流量枢纽。整合甲秀楼、黔灵山等标志性景点，提供实时热度与快捷购票。",
+    provider: "高德地图",
+    screen: "CITY_GUIYANG"
+  },
+  {
+    id: "guiyang_activities",
+    title: "活动日历",
+    description: "城市级文旅动态引擎。聚合青云市集、避暑季等季节性活动，实现“以事引人”。",
+    provider: "贵州文旅",
+    screen: "CITY_GUIYANG"
+  },
+  {
+    id: "guiyang_routes",
+    title: "经典线路",
+    description: "精品旅游线路推荐。针对康养、人文、古镇等不同需求提供专业行程规划，支持地图一键描点。",
+    provider: "高德地图",
+    screen: "CITY_GUIYANG"
+  },
+  {
+    id: "guiyang_culture",
+    title: "文化底蕴",
+    description: "筑城文化深度解读。挖掘阳明心学、非遗技艺等核心文化要素，提升城市旅游内涵。",
+    provider: "贵州文旅",
+    screen: "CITY_GUIYANG"
+  },
+  {
+    id: "guiyang_food_map",
+    title: "美食地图",
+    description: "地道风味导航。聚合肠旺面、酸汤鱼等特色美食，结合地理位置提供精准的寻味指南。",
+    provider: "高德地图",
+    screen: "CITY_GUIYANG"
+  },
+  {
+    id: "guiyang_spots",
+    title: "必游景点",
+    description: "必看打卡清单。精选甲秀楼等代表性山水人文景观，作为城市旅游的视觉与内容锚点。",
+    provider: "高德地图",
+    screen: "CITY_GUIYANG"
+  },
+  {
+    id: "guiyang_hotels",
+    title: "酒店推荐",
+    description: "高品质住宿精选。整合森林康养、古镇避世等特色民宿与精品酒店，提供直连预订入口。",
+    provider: "黄小西",
+    screen: "CITY_GUIYANG"
+  },
+  {
+    id: "guiyang_entertainment",
+    title: "娱乐推荐",
+    description: "夜生活与潮流消费。聚焦青云市集等潮流街区，展现贵阳“赛博朋克”式的现代活力。",
+    provider: "贵州文旅",
+    screen: "CITY_GUIYANG"
+  }
 ];
 
 export const DEFAULT_GOALS: string[] = [
