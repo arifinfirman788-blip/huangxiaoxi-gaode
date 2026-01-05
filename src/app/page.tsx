@@ -63,6 +63,8 @@ export default function Home() {
   const [details, setDetails] = useState<FeatureDetail[]>(DEFAULT_DETAILS);
   const [goals, setGoals] = useState<string[]>(DEFAULT_GOALS);
   const [questions, setQuestions] = useState<string[]>(DEFAULT_QUESTIONS);
+  const scenicAgentUrl = process.env.NEXT_PUBLIC_SCENIC_AGENT_URL ?? 'http://localhost:5173';
+  const sojournAgentUrl = process.env.NEXT_PUBLIC_SOJOURN_AGENT_URL ?? 'http://localhost:5174';
 
   // Initial load from localStorage
   useEffect(() => {
@@ -192,7 +194,7 @@ export default function Home() {
         <select 
            value={provider}
            onClick={(e) => e.stopPropagation()}
-           onChange={(e) => handleUpdateDetail(id, 'provider', e.target.value as any)}
+           onChange={(e) => handleUpdateDetail(id, 'provider', e.target.value as ProviderType)}
            className={`bg-transparent outline-none cursor-pointer font-black tracking-widest uppercase italic appearance-none ${config.text} ${small ? 'text-[9px]' : 'text-[11px]'}`}
         >
            <option value="高德地图" className="bg-[#0f172a] text-blue-400">高德地图</option>
@@ -236,6 +238,26 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col items-end gap-3">
+          <div className="flex flex-wrap items-center justify-end gap-2">
+            <a
+              href={scenicAgentUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="px-4 py-2 bg-white/5 hover:bg-white/10 text-slate-200 border border-white/10 rounded-xl text-[9px] font-black uppercase tracking-widest transition-all"
+              title={scenicAgentUrl}
+            >
+              景区智能体
+            </a>
+            <a
+              href={sojournAgentUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="px-4 py-2 bg-white/5 hover:bg-white/10 text-slate-200 border border-white/10 rounded-xl text-[9px] font-black uppercase tracking-widest transition-all"
+              title={sojournAgentUrl}
+            >
+              旅居智能体
+            </a>
+          </div>
           <div className="flex gap-2">
             <button 
               onClick={handlePersistence}
