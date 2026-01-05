@@ -14,6 +14,8 @@ const eslintConfig = defineConfig([
     "next-env.d.ts",
     "guizhou-travel-source/**",
     "guizhou-travel-vue/dist/**",
+    "apps/product-portal/**",
+    "apps/sojourn-agent/**",
   ]),
 ]);
 
